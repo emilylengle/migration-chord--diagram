@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Regional Migration 1960-2000</title>
+		<script type="text/javascript" src="d3/d3.js" charset="utf-8"></script>
+		<style type="text/css"></style>
+	</head>
+	<body>
+		<script type="text/javascript">
+		var matrix = [[5956939, 39253, 228412, 4558, 2116, 3489, 9686, 4347470, 167995, 402267, 265, 17373, 1209806, 162815, 1703, 402, 654, 57, 107560, 21114, 359468, 983019], [1976, 16571666, 1267, 501163, 111219, 1225576, 18903, 667455, 5190, 6918, 76546, 2635, 471862, 11083, 85, 16, 35, 48, 100192, 7172, 408019, 654295], [102986, 787, 1199066, 6774, 2017, 1597, 641, 22349437, 46263, 3866, 2258, 14029, 89897, 25476, 201, 154, 73, 84, 3272, 48153, 90741, 51092], [8686, 57252, 798, 10544041, 966769, 555113, 1769589, 605592, 6114, 2880, 152976, 4218, 359039, 146396, 6739, 359, 1597, 52, 327137, 10413, 1150198, 585888], [46775, 123367, 2657, 570314, 2235258, 200708, 21003, 707194, 17143, 3922, 62028, 42146, 1436087, 160500, 6700, 420, 3878, 61, 5819391, 21583, 370520, 10808687], [26281, 283918, 364, 1494117, 268330, 1472525, 244706, 87319, 506, 770, 10237, 9154, 556058, 2328, 10, 1, 5, 12, 27639, 3921, 80029, 329997], [2763, 6379, 372, 788348, 1683, 9364, 1869545, 246065, 4012, 816, 62170, 3080, 31497, 214372, 1674, 563, 1157, 10, 5546, 2832, 414511, 71918], [313535, 164488, 1056660, 56739, 48835, 42342, 37488, 6381424, 1161812, 304633, 65447, 167549, 727453, 313887, 10643, 102932, 14343, 205, 322731, 52168, 1438066, 952554], [105083, 171415, 107640, 12499, 1093, 2821, 1648, 13882271, 1943941, 1020, 547, 17504, 244506, 9265, 5276, 64, 688, 71, 2608, 26655, 1155875, 788563], [899352, 14685, 64011, 82858, 9695, 52876, 19532, 7580002, 62741, 16881217, 128669, 8786431, 191647, 672330, 8582, 51902, 4428, 12448, 28684, 83178, 725669, 566557], [13672, 51219, 10129, 348461, 41834, 199903, 109731, 4223811, 19913, 196376, 72556499, 1713965, 339882, 488464, 38269, 3025, 614, 109320, 11652542, 38535, 3757531, 1385250], [27426, 2386, 4948, 10987, 19396, 2908, 7557, 7861119, 9874, 727422, 865254, 6305735, 274470, 1112136, 25790, 157083, 3052, 144, 1896308, 62210, 629916, 1818794], [8517210, 47220, 237350, 170792, 524034, 253858, 248765, 11223261, 334938, 36217, 13297, 17938, 3878691, 2896650, 6158, 4948, 2276, 147, 1958029, 762778, 1640492, 22381542], [11137, 3718, 1633, 11902, 1494, 2871, 28917, 371731, 2271, 78552, 22652, 37783, 88559, 1123897, 107329, 4427, 16585, 18, 33373, 2533, 575955, 149347], [456, 2, 43, 7555, 21, 100, 469, 112632, 46, 508, 5263, 1311, 328, 226265, 25391, 1600, 12173, 26, 51, 86, 1598, 17552], [153, 0, 504, 81, 12, 138, 374, 181405, 1111, 364, 1355, 14326, 1688, 1846, 12366, 41589, 631, 8, 157, 10, 31, 9388], [1288, 2, 52, 53, 4, 24, 215, 138885, 572, 433, 3222, 199, 638, 291948, 38419, 5502, 66347, 22, 235, 30, 1237, 9085], [2950, 5111, 218, 1365, 850, 1335, 2962, 161928, 220, 62148, 11335, 31362, 9738, 9781, 22, 24, 1, 3819231, 801945, 14482069, 104750, 71497], [352292, 148001, 25392, 75292, 428245, 75941, 30506, 2579692, 22460, 41506, 404779, 73945, 442408, 482679, 1970, 1614, 395, 704887, 11751866, 5063623, 1014707, 8327646], [905426, 26069, 28462, 13767, 57424, 11428, 53317, 8916696, 16048, 42873, 18261, 10327, 956442, 705920, 1998, 1109, 451, 22144535, 8157310, 68809451, 7473872, 23542814], [141021, 195266, 24785, 1077882, 29637, 275274, 904044, 12673240, 129434, 152983, 126591, 138531, 901315, 6594471, 28221, 10560, 4430, 86074, 424396, 2823062, 6892828, 2815129], [859107, 487347, 84175, 444137, 894424, 1561943, 334755, 10812046, 308451, 36468, 43348, 53267, 3569317, 1409687, 90880, 2543, 65217, 694, 1164674, 729152, 2326577, 7679160]];
+
+		//add region codes and names for labels
+		var region = d3.scale.ordinal()
+			.domain(d3.range(22))
+			.range(["South America", "West Africa", "Central America", "East Africa", "North Africa", "Central Africa", "Southern Africa", "North America", "Caribbean", "East Asia", "South Asia", "Southeast Asia", "Southern Europe", "Australia & New Zealand", "Melanesia", "Micronesia", "Polynesia", "Central Asia", "Western Asia", "Eastern Europe", "Northern Europe", "Western Europe", "Latin America"]);
+
+		var chord = d3.layout.chord()
+			//.padding(0.5)
+			.sortSubgroups(d3.descending)
+			.matrix(matrix);
+
+		var width = 1500,
+			height = 1000,
+			innerRadius = Math.min(width, height) * .41,
+			outerRadius = innerRadius * 1.1;
+
+		var fill = d3.scale.ordinal()
+			.domain(d3.range(22))
+			.range(["#FF4A46","#008941","#006FA6","#A30059","#FFDBE5","#7A4900","#0000A6","#D16100","#B79762","#004D43","#8FB0FF","#997D87","#5A0007","#809693","#FEFFE6","#1B4400","#4FC601","#3B5DFF","#4A3B53","#00C2A0","#61615A","#BA0900"]);
+
+		var svg = d3.select("body")
+			.append("svg")
+			.attr("width", width)
+			.attr("height", height)
+			.append("g")
+			.attr("transform", "translate(" + width/2 + "," + height/2 + ")");
+
+		svg.append("g").selectAll("path")
+			.data(chord.groups)
+			.enter().append("path")
+			.style("fill", function(d) {return fill(d.index);})
+			.style("stroke", function(d) {return fill(d.index);})
+			.attr("d", d3.svg.arc().innerRadius(innerRadius).outerRadius(outerRadius))
+			.on("mouseover", fade(.1))
+			.on("mouseout", fade(1));
+
+		//based on Mike Bostock's European debt crisis code and sghalld3-chord-diagrams/coffee.html and uber.html
+		svg.append("g").selectAll("text")
+			.data(chord.groups)
+			.enter().append("text")
+			.each(function(d) { d.angle = (d.startAngle + d.endAngle) / 2; })
+			.attr("dy", ".35em")
+			.style("font-family", "helvetica, arial, sans-serif")
+			.style("font-size", "10px")
+			.attr("text-anchor", function(d) {return d.angle > Math.PI ? "end" : null;})
+			.attr("transform", function(d) { return "rotate(" + (d.angle * 180 / Math.PI - 90) + ")" + "translate(" + (outerRadius + 26) + ")" + (d.angle > Math.PI ? "rotate(180)" : "");})
+			.attr("xlink:href", function(d) {return "#region" + d.index; })
+			.text(function(d) {return region(d.index);});
+
+		var ticks = svg.append("g").selectAll("g")
+			.data(chord.groups)
+			.enter().append("g").selectAll("g")
+			.data(groupTicks)
+			.enter().append("g")
+			.attr("transform", function(d) {return "rotate(" + (d.angle * 180 / Math.PI - 90) + ")" + "translate(" + outerRadius + ",0)";});
+
+		ticks.append("line")
+			.attr("x1", 1)
+			.attr("y1", 0)
+			.attr("x2", 5)
+			.attr("y2", 0)
+			.style("stroke", "#000");
+
+		svg.append("g")
+			.attr("class", "chord")
+			.selectAll("path")
+			.data(chord.chords)
+			.enter().append("path")
+			.attr("d", d3.svg.chord().radius(innerRadius))
+			.style("fill", function(d) {return fill(d.target.index);})
+			.style("opacity", 1);
+
+			
+
+		function groupTicks(d) {
+			var k = (d.endAngle - d.startAngle) /d.value;
+			return d3.range(0, d.value, 1000).map(function(v, i) {
+				return {
+					angle: v * k + d.startAngle,
+					label: i % 5 ? null : v/1000 + "k"
+				};
+			});
+		}
+
+		function fade(opacity) {
+			return function(g, i) {
+				svg.selectAll(".chord path")
+					.filter(function(d) {return d.source.index != i && d.target.index != i;})
+					.transition()
+					.style("opacity", opacity);
+			};
+		}
+
+		//function to return region name for region number from matrix.csv
+		function region(code) {
+
+		}
+		</script>
+
+	</body>
+</html>
+
+
